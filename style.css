@@ -141,7 +141,7 @@ main {
   flex: 1.1;
 }
 
-.features-title {
+.special-title {
   padding: 0 1em;
   border-left: 5px solid #ff900e;
 }
@@ -172,6 +172,40 @@ main {
   display: block;
   font-weight: normal;
   font-size: 0.3em !important;
+}
+
+/* ** Experiences Section ** */
+.experience-head {
+  width: 40%;
+}
+.experiences {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5em;
+  padding: 6em 2em 0 2em;
+}
+
+.experience {
+  transition: 0.5s;
+  padding: 2em;
+  border: 2px solid #ff900e;
+  border-radius: 8px;
+  text-align: center;
+  width: 240px;
+}
+.experience:hover {
+  transform: scale(1.1);
+}
+.count {
+  font-size: 2em;
+  color: #131313;
+}
+.experience img {
+  width: 45px;
+}
+.experience .desc {
+  padding: 0.4em 0;
 }
 /* ** Responsive CSS ** */
 
@@ -227,5 +261,17 @@ main {
     font-size: 2em;
     left: 0em;
     bottom: -1em;
+  }
+}
+
+/* * Experience section * */
+@media screen and (max-width: 576px) {
+  .experience-head {
+    width: 100%;
+  }
+  .experiences {
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em 0;
   }
 }
