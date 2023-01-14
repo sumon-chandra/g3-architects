@@ -5,3 +5,110 @@
   box-sizing: border-box;
   font-family: "Work Sans", sans-serif;
 }
+/* * Common CSS * */
+li {
+  list-style: none;
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+  color: #424242;
+  font-size: 1em;
+}
+img {
+  width: 100%;
+}
+.btn-primary {
+  font-size: 1.5em;
+  padding: 0.5em 1em;
+  background-color: #ff900e;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+}
+
+/* ** Header Section ** */
+header {
+  background: rgba(255, 144, 14, 0.1);
+}
+.head-section,
+.hero-section {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.head-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.3em 0;
+}
+.logo h3 {
+  font-size: 2em;
+  font-weight: 700;
+}
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.navbar ul li a {
+  padding: 1em 1.3em;
+  border-radius: 5px;
+}
+.navbar ul li a:hover {
+  background-color: #ff900e;
+  color: #fff;
+}
+.hero-section {
+  padding: 2em 0;
+}
+.hero-details {
+  text-align: center;
+  width: 50%;
+  padding: 2em 0;
+  margin: 0 auto;
+}
+.hero-title {
+  font-size: 3em;
+  font-weight: 700;
+}
+.hero-desc {
+  font-size: 1em;
+  font-weight: 400;
+  padding: 1em 0;
+  color: #727272;
+  line-height: 26px;
+}
+/* ** Responsive CSS ** */
+
+/* * Header section */
+@media screen and (max-width: 576px) {
+  .head-section,
+  .hero-section {
+    max-width: 100%;
+  }
+  .hero-section {
+    padding: 0 0 1em 0;
+  }
+  .head-section {
+    flex-direction: column;
+  }
+  .logo h3 {
+    font-size: 2em;
+  }
+  .navbar ul {
+    gap: 1em;
+    flex-direction: column;
+    padding-top: 1em;
+  }
+  .hero-details {
+    width: 100%;
+    padding-bottom: 1em;
+  }
+  .hero-title {
+    font-size: 1.5em;
+  }
+  .btn-primary {
+    font-size: 1em;
+  }
+}
