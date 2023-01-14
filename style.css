@@ -18,6 +18,15 @@ a {
 img {
   width: 100%;
 }
+main {
+  padding: 1em;
+}
+header {
+  background: #ff900e1a;
+}
+.section {
+  padding: 4em 0;
+}
 .btn-primary {
   font-size: 1.5em;
   padding: 0.5em 1em;
@@ -25,14 +34,29 @@ img {
   color: #fff;
   border-radius: 8px;
   border: none;
+  cursor: pointer;
+}
+.desc {
+  color: #727272;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 26px;
+  padding: 1.3em 0;
+}
+.primary {
+  color: #ff900e;
+  display: block;
+}
+.section-title {
+  font-weight: 600;
+  font-size: 2em;
+  color: #131313;
 }
 
 /* ** Header Section ** */
-header {
-  background: rgba(255, 144, 14, 0.1);
-}
 .head-section,
-.hero-section {
+.hero-section,
+main {
   max-width: 1250px;
   margin: 0 auto;
 }
@@ -60,7 +84,7 @@ header {
   color: #fff;
 }
 .hero-section {
-  padding: 2em 0;
+  padding-top: 2em;
 }
 .hero-details {
   text-align: center;
@@ -79,12 +103,83 @@ header {
   color: #727272;
   line-height: 26px;
 }
+
+/* ** About us section ** */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4em;
+}
+.about-img {
+  flex: 1.5;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5em;
+}
+.about-img img {
+  cursor: pointer;
+  transition: 0.5s;
+}
+.about-img img:hover {
+  transform: scale(1.1);
+}
+.about-details {
+  flex: 1;
+}
+
+/* ** Features section ** */
+.features-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 3em;
+}
+.features-details {
+  flex: 0.8;
+}
+.features-img {
+  flex: 1.1;
+}
+
+.features-title {
+  padding: 0 1em;
+  border-left: 5px solid #ff900e;
+}
+.features {
+  padding: 2em;
+}
+
+.feature-title {
+  font-size: 1.3em;
+}
+.feature {
+  padding: 2em 0;
+}
+.feature .desc {
+  padding: 0.4em 0;
+}
+.features-img {
+  position: relative;
+}
+.features-img .btn-primary {
+  font-size: 3em;
+  font-weight: 700;
+  position: absolute;
+  left: -1em;
+  bottom: -0.1em;
+}
+.features-img .btn-primary small {
+  display: block;
+  font-weight: normal;
+  font-size: 0.3em !important;
+}
 /* ** Responsive CSS ** */
 
 /* * Header section */
 @media screen and (max-width: 576px) {
   .head-section,
-  .hero-section {
+  .hero-section,
+  main {
     max-width: 100%;
   }
   .hero-section {
@@ -110,5 +205,27 @@ header {
   }
   .btn-primary {
     font-size: 1em;
+  }
+}
+
+/* * About section * */
+@media screen and (max-width: 576px) {
+  .about-section {
+    flex-direction: column-reverse;
+  }
+  .about-img {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* * Features section * */
+@media screen and (max-width: 576px) {
+  .features-section {
+    flex-direction: column;
+  }
+  .features-img .btn-primary {
+    font-size: 2em;
+    left: 0em;
+    bottom: -1em;
   }
 }
